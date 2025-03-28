@@ -30,14 +30,22 @@ export function CardsSkeleton() {
 }
 
 export function RevenueChartSkeleton() {
+  const chartContainerClasses = `${shimmer} relative w-full overflow-hidden md:col-span-4`;
+  const titleClasses = "mb-4 h-8 w-36 rounded-md bg-gray-100";
+  const chartWrapperClasses = "rounded-xl bg-gray-100 p-4";
+  const chartClasses = "sm:grid-cols-13 mt-0 grid h-[410px] grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4";
+  const legendClasses = "flex items-center pb-2 pt-6";
+  const legendIconClasses = "h-5 w-5 rounded-full bg-gray-200";
+  const legendTextClasses = "ml-2 h-4 w-20 rounded-md bg-gray-200";
+
   return (
-    <div className={`${shimmer} relative w-full overflow-hidden md:col-span-4`}>
-      <div className="mb-4 h-8 w-36 rounded-md bg-gray-100" />
-      <div className="rounded-xl bg-gray-100 p-4">
-        <div className="sm:grid-cols-13 mt-0 grid h-[410px] grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4" />
-        <div className="flex items-center pb-2 pt-6">
-          <div className="h-5 w-5 rounded-full bg-gray-200" />
-          <div className="ml-2 h-4 w-20 rounded-md bg-gray-200" />
+    <div className={chartContainerClasses}>
+      <div className={titleClasses} />
+      <div className={chartWrapperClasses}>
+        <div className={chartClasses} />
+        <div className={legendClasses}>
+          <div className={legendIconClasses} />
+          <div className={legendTextClasses} />
         </div>
       </div>
     </div>
